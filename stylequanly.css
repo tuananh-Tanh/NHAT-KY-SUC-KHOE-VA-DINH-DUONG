@@ -1,0 +1,203 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f4; /* Màu nền xám xanh nhạt dịu mát */
+  color: #333333;
+}
+
+/* --- Thanh Menu Điều Hướng --- */
+.navbar {
+  border-bottom: 3px solid #4caf50; /* Border xanh lá dày dưới menu làm điểm nhấn */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.navbar-brand {
+  font-weight: 700;
+  color: #4caf50 !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-brand img {
+  border: 2px solid #ffffff; /* Viền trắng quanh Logo */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+h1.text-center {
+  color: #1b5e20;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+p.text-center.mb-4 {
+  color: #666666;
+  font-size: 15px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+/* --- TRANG TRÍ CARD CHUNG (Form & Bảng) --- */
+.card {
+  border: 1px solid #e1e8e1;
+  border-radius: 20px; /* Bo tròn góc hiện đại */
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(46, 125, 50, 0.05); /* Đổ bóng mịn màng màu xanh lá rất nhẹ */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* --- TRANG TRÍ FORM NHẬP BỮA ĂN (Bên trái) --- */
+.card h3 {
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-left: 5px solid #4caf50; /* Gạch dọc highlight bên trái tiêu đề form */
+  padding-left: 12px;
+}
+
+/* Hiệu ứng tương tác nâng cao cho các ô nhập liệu (Input & Select) */
+.form-control,
+.form-select {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #495057;
+  background-color: #fafafa;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Tạo hiệu ứng mượt mà khi click */
+}
+
+/* HIỆU ỨNG PHÁT SÁNG & BIẾN ĐỔI KHI CLICK CHUỘT VÀO Ô NHẬP (Focus Effect) */
+.form-control:focus,
+.form-select:focus {
+  color: #212529;
+  background-color: #ffffff;
+  border-color: #4caf50; /* Đổi viền sang màu xanh lá khi gõ chữ */
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.15); /* Hiệu ứng tỏa hào quang xanh xung quanh ô nhập */
+  transform: translateY(-1px); /* Nhấc nhẹ ô nhập lên tạo cảm giác nổi 3D */
+}
+
+/* Hiệu ứng nhãn chữ (Label) */
+.form-label {
+  color: #2e7d32;
+  font-size: 14px;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+/* Đổi màu chữ Label sang xanh đậm hơn khi ô dưới nó được click */
+.mb-3:focus-within .form-label {
+  color: #1b5e20;
+}
+
+/* Nút Submit "Thêm vào thực đơn" */
+.btn-success {
+  background-color: #4caf50;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+/* Hiệu ứng Hover nút bấm */
+.btn-success:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px); /* Nút nhấc lên khi rê chuột */
+  box-shadow: 0 6px 18px rgba(56, 142, 60, 0.35);
+}
+/* Hiệu ứng khi ấn giữ nút */
+.btn-success:active {
+  transform: translateY(1px); /* Nút lún xuống khi bấm */
+}
+
+/* --- TRANG TRÍ BẢNG THỰC ĐƠN (Bên phải) --- */
+.table-responsive {
+  border-radius: 14px;
+  overflow: hidden; /* Giúp bo tròn được cả góc của bảng */
+  border: 1px solid #e0e8e0;
+}
+
+.table {
+  margin-bottom: 0; /* Xóa khoảng cách thừa */
+}
+
+/* Đầu bảng (Header) màu xanh đen sang trọng */
+.table-dark {
+  background-color: #2e3d30 !important;
+  color: #ffffff;
+}
+.table-dark th {
+  border: none;
+  padding: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+/* Các ô nội dung bên trong bảng */
+.table td {
+  padding: 14px 15px;
+  font-size: 14px;
+  border-bottom: 1px solid #eef2ee;
+}
+
+/* HIỆU ỨNG ĐỔI MÀU DÒNG (Zebra Striping) - Cách một dòng đổi màu một lần */
+.table tbody tr:nth-of-type(even) {
+  background-color: #f8faf8;
+}
+.table tbody tr:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+/* HIỆU ỨNG RÊ CHUỘT QUA TỪNG HÀNG TRONG BẢNG (Row Hover Effect) */
+.table-hover tbody tr {
+  transition: background-color 0.2s ease;
+}
+.table-hover tbody tr:hover {
+  background-color: #e8f5e9 !important; /* Dòng tự động đổi sang màu xanh lá mạ rất dịu khi di chuột qua */
+  cursor: pointer;
+}
+
+/* Cột thông tin Sinh viên (Họ tên + MSSV) */
+td strong {
+  color: #2e7d32;
+  font-size: 14.5px;
+}
+td small {
+  font-size: 11.5px;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* Thẻ Badge hiển thị Thời điểm ăn (Sáng, Trưa, Tối...) */
+.badge.bg-secondary {
+  background-color: #e8f5e9 !important;
+  color: #2e7d32 !important;
+  border: 1px solid #c8e6c9;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Chân bảng (Footer) chứa ô Tổng Calo */
+.table-light {
+  background-color: #f1f8f3 !important;
+}
+.table-light td {
+  border-top: 2px solid #c8e6c9 !important;
+  padding: 16px 15px;
+  font-size: 15px;
+}
+/* Hiệu ứng chữ tổng Calo nhấp nháy/nổi bật */
+#totalCalories {
+  font-size: 17px;
+  color: #d32f2f !important; /* Màu đỏ nổi bật */
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,187 @@
+body {
+  font-family:
+    "Segoe UI",
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    sans-serif;
+  background-color: #0b0f14; /* Màu đen xanh của vỏ máy tính, trạm điều khiển */
+  color: #cbd5e1; /* Màu chữ xám bạc giúp làm dịu mắt */
+  overflow-x: hidden;
+  position: relative;
+}
+.navbar {
+  border-bottom: 3px solid #4caf50; /* Border xanh lá dày dưới menu làm điểm nhấn */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.navbar-brand {
+  font-weight: 700;
+  color: #4caf50 !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-brand img {
+  border: 2px solid #ffffff; /* Viền trắng quanh Logo */
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Hiệu ứng hạt giả lập hoặc lưới ma trận ngầm phía sau nền (Grid Background) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(18, 24, 32, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 24, 32, 0.5) 1px, transparent 1px);
+  background-size: 20px 20px; /* Tạo lưới ô vuông mờ như bảng mạch */
+  z-index: -1;
+}
+
+/* --- Tiêu đề trang Debug --- */
+h1.text-center {
+  color: #ff3838; /* Màu đỏ cảnh báo hệ thống (System Error/Debug) */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 56, 56, 0.4); /* Phát sáng chữ */
+}
+p.text-center.text-muted {
+  color: #64748b !important;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+}
+
+/* --- TRANG TRÍ CARD CHUNG (Khung cơ khí) --- */
+.card {
+  background-color: #131a22 !important; /* Hộp đen nhám vỏ máy */
+  border: 1px solid #223142 !important; /* Viền sắt thép cơ khí */
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Đèn LED tín hiệu ảo góc trên Card */
+.card::after {
+  content: "● SYS_READY";
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-family: monospace;
+  font-size: 10px;
+  color: #00ff66; /* Đèn xanh lá báo trạng thái hoạt động */
+  text-shadow: 0 0 5px #00ff66;
+}
+
+/* Thay đổi màu đèn LED riêng cho cột mã lỗi sang màu đỏ cảnh báo */
+.col-lg-6:first-child .card::after {
+  content: "● SYS_ERROR";
+  color: #ff3333;
+  text-shadow: 0 0 5px #ff3333;
+}
+
+/* Tiêu đề nhỏ bên trong Card kèm biểu tượng (Iconic) */
+.card h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- KHỐI TRÌNH DIỄN CODE (Code Editor Terminal) --- */
+.code-block {
+  background-color: #070b10 !important; /* Đen sâu thẳm màn hình console */
+  border: 1px solid #1e293b;
+  border-left: 4px solid #3b82f6; /* Thanh đánh dấu viền trái màu xanh dương */
+  border-radius: 8px;
+  padding: 18px;
+  font-family: "Consolas", "Fira Code", "Courier New", monospace !important;
+  font-size: 13.5px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8); /* Bóng sụp bên trong tạo độ sâu */
+}
+
+/* Đổi màu viền trái của code đã sửa thành màu xanh lục hoàn thành */
+#fixedCodeContainer {
+  border-left-color: #00ff66 !important;
+}
+
+/* --- TÔ MÀU PHÂN TÁCH CÚ PHÁP CODE (Syntax Highlighting) --- */
+.code-keyword {
+  color: #ff79c6; /* Từ khóa let, function màu hồng tím */
+  font-weight: bold;
+}
+.code-function {
+  color: #50fa7b; /* Tên hàm, phương thức màu xanh neon chuối */
+}
+.code-string {
+  color: #f1fa8c; /* Chuỗi ký tự text màu vàng chanh sáng */
+}
+.code-comment {
+  color: #6272a4; /* Ghi chú comment màu xanh xám dịu */
+  font-style: italic;
+}
+
+/* --- HỘP THÔNG BÁO CẢNH BÁO (Alert Bootstrap Custom) --- */
+.alert-danger {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  border: 1px dashed #ef4444 !important;
+  color: #fca5a5 !important;
+  border-radius: 8px;
+}
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  border: 1px dashed #10b981 !important;
+  color: #a7f3d0 !important;
+  border-radius: 8px;
+}
+
+/* --- NÚT BẤM THỬ NGHIỆM HỆ THỐNG (Test Button) --- */
+.btn-success {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #00ff66 !important; /* Chữ phát sáng */
+  border: 1px solid #00ff66 !important;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.1);
+}
+
+/* Hiệu ứng rê chuột vào nút bấm (Hover Machine Effect) */
+.btn-success:hover {
+  background: #00ff66 !important;
+  color: #000000 !important; /* Đảo ngược màu cực kỳ nổi bật */
+  box-shadow: 0 0 20px rgba(0, 255, 102, 0.5); /* Tỏa hào quang rực rỡ */
+  transform: scale(1.02);
+}
+
+/* Hiệu ứng khi nhấn click giữ nút */
+.btn-success:active {
+  transform: scale(0.98);
+}
+
+/* Tùy chỉnh thanh cuộn ngang (Scrollbar) cho các khối code dài */
+.code-block::-webkit-scrollbar {
+  height: 6px;
+}
+.code-block::-webkit-scrollbar-track {
+  background: #070b10;
+}
+.code-block::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+.code-block::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

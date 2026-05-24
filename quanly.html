@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang quản lý</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylequanly.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a href="trangchu.html" class="navbar-brand"
+          ><img
+            src="logo healthy food.jpg"
+            alt="Logo"
+            width="50"
+            height="50"
+            class="d-inline-block align-text-top"
+          />Health food diary</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="trangchu.html" class="nav-link">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a href="quanly.html" class="nav-link">Trang quản lý</a>
+            </li>
+            <li class="nav-item">
+              <a href="debug.html" class="nav-link">Sửa lỗi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container my-5">
+      <h1 class="text-center mt-4">Trang quản lý</h1>
+      <p class="text-center mb-4">
+        Chào mừng bạn đến với trang quản lý của Health Food Diary! Tại đây, bạn
+        có thể theo dõi và quản lý các bữa ăn, thực đơn, và thông tin dinh dưỡng
+        của mình một cách dễ dàng.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="card p-4 shadow-sm">
+            <h3 class="mb-3" style="color: #2e7d32">Thêm bữa ăn mới</h3>
+            <form id="mealForm">
+              <div class="mb-3">
+                <label for="fullName" class="form-label fw-bold"
+                  >Họ và tên</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  placeholder="Nhập họ và tên sinh viên"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="studentId" class="form-label fw-bold"
+                  >Mã số sinh viên</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="studentId"
+                  placeholder="Nhập MSSV để kiểm tra chèn hàng"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="mealSelect" class="form-label fw-bold"
+                  >Chọn món ăn (Thực đơn trang chủ)</label
+                >
+                <select class="form-select" id="mealSelect" required>
+                  <option value="" selected disabled>
+                    -- Chọn món ăn từ thực đơn --
+                  </option>
+                  <option
+                    id="thucdon1"
+                    value="Mâm cơm (Thịt chân giò, Bò xào đỗ, Canh cải)"
+                    data-calories="1250"
+                  >
+                    thực đơn 1 (tổ hợp 7 món)
+                  </option>
+                  <option
+                    id="thucdon2"
+                    value="Mâm cơm (Thịt bò xào rau muống, Đậu phụ, Canh khoai sọ)"
+                    data-calories="1100"
+                  >
+                    thực đơn 2 (tổ hợp 5 món)
+                  </option>
+                  <option
+                    id="thucdon3"
+                    value="Mâm cơm (mỳ tôm úp nước sôi)"
+                    data-calories="350"
+                  >
+                    thực đơn 3 (mỳ tôm úp nước sôi)
+                  </option>
+                  <option
+                    id="thucdon4"
+                    value="Mâm cơm (Cá chép om dưa, Trứng cuộn, Rau luộc,...)"
+                    data-calories="800"
+                  >
+                    thực đơn 4 ( tổ hợp 5 món)
+                  </option>
+                  <option
+                    id="thucdon5"
+                    value="Cơm rang dưa bò "
+                    data-calories="500"
+                  >
+                    thực đơn 5 (cơm rang dưa bò)
+                  </option>
+                  <option
+                    id="thucdon6"
+                    value="Mâm cơm (Bắp bò luộc, Cá cuộn chiên xù, Bí luộc, Canh bí đỏ,..)"
+                    data-calories="780"
+                  >
+                    thực đơn 6 (tổ hợp 4 món)
+                  </option>
+                  <option
+                    id="thucdon7"
+                    value="Mâm cơm (Trứng rán, Thịt heo xào hành tây, Rau muống xào tỏi, Canh rau ngót, Cơm trắng,...)"
+                    data-calories="900"
+                  >
+                    thực đơn 7 (tổ hợp 5 món)
+                  </option>
+                </select>
+                <div class="form-text text-muted">
+                  * Lượng calo sẽ được hệ thống tự động tính dựa trên món chọn.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="mealTime" class="form-label fw-bold"
+                  >Thời điểm ăn</label
+                >
+                <select class="form-select" id="mealTime" required>
+                  <option value="" selected disabled>
+                    -- Chọn thời điểm --
+                  </option>
+                  <option value="Bữa sáng">Bữa sáng</option>
+                  <option value="Bữa trưa">Bữa trưa</option>
+                  <option value="Bữa tối">Bữa tối</option>
+                  <option value="Bữa phụ">Bữa phụ</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-success w-100 fw-bold">
+                Thêm vào thực đơn
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="card p-4 shadow-sm">
+            <h3 class="mb-3" style="color: #2e7d32">Bảng thực đơn hàng ngày</h3>
+
+            <div class="table-responsive">
+              <table class="table table-bordered table-hover align-middle">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Sinh viên</th>
+                    <th>Thời điểm</th>
+                    <th>Món ăn chọn</th>
+                    <th>Calo tự tính</th>
+                  </tr>
+                </thead>
+                <tbody id="mealTableBody">
+                  <tr id="emptyRow">
+                    <td colspan="4" class="text-center text-muted">
+                      Chưa có món ăn nào được thêm.
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot class="table-light fw-bold">
+                  <tr>
+                    <td colspan="3" class="text-end">
+                      Tổng lượng calo hàng ngày:
+                    </td>
+                    <td id="totalCalories" class="text-danger">0 kcal</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="quanly.js"></script>
+    <script>
+      src =
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styletrangchu.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a href="trangchu.html" class="navbar-brand"
+          ><img
+            src="logo healthy food.jpg"
+            alt="Logo"
+            width="50"
+            height="50"
+            class="d-inline-block align-text-top"
+          />Health food diary</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="trangchu.html" class="nav-link">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a href="quanly.html" class="nav-link">Trang quản lý</a>
+            </li>
+            <li class="nav-item">
+              <a href="debug.html" class="nav-link">Sửa lỗi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <h3>Chào mừng đến với Health food Diary</h3>
+          <p>
+            Đây là một ứng dụng giúp bạn theo dõi chế độ ăn uống và sức khỏe của
+            mình. Bạn có thể ghi lại những món ăn bạn đã ăn, lượng calo tiêu
+            thụ, và các thông tin dinh dưỡng khác để quản lý sức khỏe tốt hơn.
+          </p>
+        </div>
+        <div class="col-lg-9 text-center">
+          <h3>Thực Đơn Trong Tuần Vừa Qua</h3>
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="5"
+                aria-label="Slide 6"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="6"
+                aria-label="Slide 7"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="mâm-1.jpg"
+                  class="d-block w-100 hinh-slider"
+                  alt="First slide"
+                  style="width: 250px; height: 400px; object-fit: cover"
+                />
+                <h3 style="font-size: x-large; text-align: center" class="mt-2">
+                  thực đơn 1
+                </h3>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="mâm-2.jpg"
+                  class="d-block w-100 hinh-slider"
+                  alt="Second slide"
+                  style="width: 250px; height: 400px; object-fit: cover"
+                />
+                <h3 style="font-size: x-large; text-align: center" class="mt-2">
+                  thực đơn 2
+                </h3>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="ảnh mỳ úp.jfif"
+                  class="d-block w-100 hinh-slider"
+                  alt="Third slide"
+                  style="width: 250px; height: 400px"
+                />
+                <h3 style="font-size: x-large; text-align: center" class="mt-2">
+                  thực đơn 3
+                </h3>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="mâm-4.jpg"
+                  class="d-block w-100 hinh-slider"
+                  alt="Fourth slide"
+                  style="width: 250px; height: 400px; object-fit: cover"
+                />
+                <h3 style="font-size: x-large; text-align: center" class="mt-2">
+                  thực đơn 4
+                </h3>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="cơm rang dưa bò.png"
+                  class="d-block w-100 hinh-slider"
+                  alt="Fifth slide"
+                  style="width: 250px; height: 400px; object-fit: cover"
+                />
+                <h3 style="font-size: x-large; text-align: center" class="mt-2">
+                  thực đơn 5
+                </h3>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="mâm-6.jpg"
+                  class="d-block w-100 hinh-slider"
+                  alt="Sixth slide"
+                  style="width: 250px; height: 400px; object-fit: cover"
+                />
+                <h3 style="font-size: x-large; text-align: center" class="mt-2">
+                  thực đơn 6
+                </h3>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="mâm-7.jfif"
+                  class="d-block w-100 hinh-slider"
+                  alt="Seventh slide"
+                  style="width: 250px; height: 400px"
+                />
+                <h3 style="font-size: x-large; text-align: center" class="mt-2">
+                  thực đơn 7
+                </h3>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Trước</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Sau</span>
+            </button>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img
+                  src="mâm-1.jpg"
+                  class="card-img-top"
+                  alt="Mâm 1"
+                  style="width: 250px; height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Thực đơn 1</h5>
+                  <p class="card-text">
+                    Món mặn: Thịt chân giò/thịt heo luộc thái mỏng, mềm ngậy.
+                    Món xào: Thịt bò xào đỗ cove (đậu cô ve) xanh mướt, chín
+                    tới. Món canh: Canh rau cải xanh thanh mát, giải nhiệt. Món
+                    đưa cơm: Dưa cải chua nấu gân bò/thịt ba chỉ kèm cà chua đậm
+                    đà. Nước chấm: Nước mắm tỏi ớt cay nồng đậm vị.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img
+                  src="mâm-2.jpg"
+                  class="card-img-top"
+                  alt="Mâm 2"
+                  style="width: 250px; height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Thực đơn 2</h5>
+                  <p class="card-text">
+                    Món chính 1: Thịt bò xào rau muống tỏi thơm nức Món chính 2:
+                    Đậu phụ tẩm hành/Đậu hũ luộc thanh mát Món canh: Canh khoai
+                    sọ nấu sườn và mọc (mọc viên) Nước luộc: Nước luộc rau đánh
+                    sấu/chanh giải nhiệt Nước chấm: Nước mắm tỏi ớt & Nước mắm
+                    nguyên chất
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img
+                  src="ảnh mỳ úp.jfif"
+                  class="card-img-top"
+                  alt="Mâm 3"
+                  style="width: 250px; height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Thực đơn 3</h5>
+                  <p class="card-text">
+                    Món chính: Mỳ tôm úp nước sôi (hảo hảo) Topping: Hương vị
+                    nguyên bản (không người lái) Thời gian chế biến: Đúng 3 phút
+                    Thức uống kèm: Nước lọc tinh khiết
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img
+                  src="mâm-4.jpg"
+                  class="card-img-top"
+                  alt="Mâm 4"
+                  style="width: 250px; height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Thực đơn 4</h5>
+                  <p class="card-text">
+                    Món chính: Cá chép/Cá điêu hồng om dưa cải chua đậm đà Món
+                    kèm: Trứng cuộn rán hành vàng ruộm Món rau luộc: Rau muống
+                    luộc & Bí xanh (bí đao) luộc Nước luộc: Nước luộc rau đánh
+                    sấu/chanh thanh mát Nước chấm: Nước mắm tỏi ớt cay ngọt ngon
+                    cơm
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img
+                  src="cơm rang dưa bò.png"
+                  class="card-img-top"
+                  alt="Mâm 5"
+                  style="width: 250px; height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Thực đơn 5</h5>
+                  <p class="card-text">
+                    Món chính: Cơm rang dưa bò đậm đà, thơm ngon
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img
+                  src="mâm-6.jpg"
+                  class="card-img-top"
+                  alt="Mâm 6"
+                  style="width: 250px; height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Thực đơn 6</h5>
+                  <p class="card-text">
+                    Món mặn 1: Bắp bò luộc/nạm bò thái mỏng mềm thơm Món mặn 2:
+                    Cá cuộn tẩm bột chiên xù vàng giòn Món rau luộc: Bí xanh (bí
+                    đao) luộc & Rau muống luộc xanh mướt Nước luộc: Nước luộc
+                    rau đánh sấu/chanh chua dịu thanh mát Nước chấm: Nước mắm
+                    tỏi ớt chua ngọt đậm đà
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card h-100">
+                <img
+                  src="mâm-7.jfif"
+                  class="card-img-top"
+                  alt="Mâm 7"
+                  style="width: 250px; height: 200px"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Thực đơn 7</h5>
+                  <p class="card-text">
+                    Món chính 1: Trứng rán (trứng chiên) vàng óng, mềm xốp Món
+                    chính 2: Thịt heo xào hành tây và hành lá ngọt thơm Món
+                    canh: Canh cà chua nấu trứng/canh mọc rau củ thanh ngọt Món
+                    rau: Rau cải luộc/Rau muống luộc xanh mướt
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
