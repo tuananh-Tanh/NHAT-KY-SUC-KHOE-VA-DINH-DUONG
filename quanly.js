@@ -104,9 +104,9 @@ function renderTable() {
 
     tableBody.appendChild(row);
 
-    // THỰC HIỆN CỘNG DỒN DỮ LIỆU
-    totalCaloriesCount += item.calories; // Cộng dồn lượng Calo nguyên bản của option
-    globalTotalMealsCount += item.mealCount; // Tích lũy cộng dồn số lượng món ăn dựa vào id bạn đã gán
+   
+    totalCaloriesCount += item.calories; 
+    globalTotalMealsCount += item.mealCount; 
   });
 
   
@@ -115,7 +115,7 @@ function renderTable() {
 
  
   if (globalTotalMealsCount > 10) {
-    // Sử dụng setTimeout nhẹ (50ms) để trình duyệt kịp cập nhật vẽ bảng lên màn hình trước khi bảng thông báo hiện ra chặn trình duyệt
+    
     setTimeout(function () {
       alert(
         `Thông báo: Tổng số món ăn tích lũy của bảng thực đơn hôm nay đã đạt ${globalTotalMealsCount} món (Vượt mốc 10 món!). Chúc mừng bạn có một chế độ dinh dưỡng cực kỳ đa dạng và lành mạnh.`,
