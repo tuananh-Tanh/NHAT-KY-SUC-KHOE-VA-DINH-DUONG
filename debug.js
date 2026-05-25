@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Lấy các phần tử giao diện từ DOM
+  
   const btnAnalyze = document.getElementById("btnAnalyze");
   const codeInput = document.getElementById("codeContainerInput");
   const resultArea = document.getElementById("debugResultArea");
 
-  // Lắng nghe sự kiện click vào nút "KÍCH HOẠT PHÂN TÍCH"
+  
   btnAnalyze.addEventListener("click", function () {
     const enteredCode = codeInput.value.trim();
 
-    // 1. Kiểm tra xem người dùng đã nhập chữ vào chưa
+    
     if (enteredCode === "") {
       alert(
         "Lỗi hệ thống: Vui lòng dán đoạn mã code cần sửa lỗi vào ô trống trước!",
@@ -16,28 +16,26 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // 2. Kiểm tra tính hợp lệ: Xem đoạn mã nhập vào có đúng là đoạn mã lỗi của đề bài không
-    // (Kiểm tra xem có chứa từ khóa cốt lõi "23010001_btn_save" hoặc "saveDate" không)
+    
     if (
       enteredCode.includes("23010001_btn_save") ||
       enteredCode.includes("saveDate")
     ) {
-      // Nếu đúng đoạn mã lỗi, gỡ bỏ class 'd-none' của Bootstrap để hiển thị vùng kết quả lên màn hình
-      resultArea.classList.remove("d-none");
+      
 
-      // Tiến hành render đoạn mã gốc được format đẹp mắt sang cột bên trái
+      
       renderOriginalCode();
 
-      // Tiến hành render đoạn mã đã sửa lỗi hoàn chỉnh kèm comment giải thích sang cột bên phải
+     
       renderFixedCode();
 
-      // Cuộn màn hình xuống vùng kết quả một cách mượt mà để sinh viên dễ quan sát
+     
       resultArea.scrollIntoView({ behavior: "smooth" });
 
-      // Kích hoạt tính năng chạy thử của nút bấm Test Code bên dưới kết quả
+     
       initTestButton();
     } else {
-      // Nếu sinh viên nhập mã linh tinh không liên quan đến đề bài
+     
       alert(
         "Mã lệnh không khớp! Vui lòng nhập nguyên văn đoạn mã lỗi JavaScript được yêu cầu trong đề bài.",
       );
@@ -71,7 +69,7 @@ btn.<span class="code-function">addEventListener</span>(<span class="code-string
     document.getElementById("fixedCodeContainer").innerHTML = fixedCode;
   }
 
-  // Hàm khởi tạo và bắt sự kiện chạy thực tế cho nút Test Code giả lập
+  
   function initTestButton() {
     let testBtn = document.getElementById("23010001_btn_save");
     if (testBtn) {
