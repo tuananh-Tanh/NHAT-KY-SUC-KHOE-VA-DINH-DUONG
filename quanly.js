@@ -1,11 +1,12 @@
+
 let listMeals = [];
-let totalCaloriesCount = 0;
+let totalCaloriesCount = 0; 
 
 
 document
   .getElementById("mealForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    event.preventDefault(); // Chặn hành động tải lại trang mặc định
 
     
     const fullName = document.getElementById("fullName").value.trim();
@@ -17,9 +18,11 @@ document
     const selectedOption = selectElement.options[selectElement.selectedIndex];
 
     const optionId = selectedOption.id; 
-    const optionText = selectedOption.text; 
+    const optionText = selectedOption.text;
     const mealValue = selectElement.value; 
-    const mealCalories = parseInt(selectedOption.getAttribute("data-calories"));
+    const mealCalories = parseInt(selectedOption.getAttribute("data-calories")); 
+
+    
     let currentMealCount = 0;
 
     if (optionId === "thucdon1") {
@@ -48,7 +51,7 @@ document
       mealCount: currentMealCount,
     };
 
-    
+   
     const lastChar = studentId.charAt(studentId.length - 1);
     const lastNumber = parseInt(lastChar);
 
@@ -60,29 +63,30 @@ document
     }
 
     if (lastNumber % 2 !== 0) {
-      
+      // MSSV số lẻ -> Chèn bản ghi lên ĐẦU mảng (unshift)
       listMeals.unshift(newMeal);
     } else {
-      
+      // MSSV số chẵn -> Chèn bản ghi xuống CUỐI mảng (push)
       listMeals.push(newMeal);
     }
 
     
     renderTable();
 
-    
+    // 7. Đặt lại (Reset) các trường lựa chọn về trạng thái trống ban đầu
     document.getElementById("mealSelect").value = "";
     document.getElementById("mealTime").value = "";
   });
+
 
 function renderTable() {
   const tableBody = document.getElementById("mealTableBody");
   tableBody.innerHTML = ""; 
 
-  totalCaloriesCount = 0; u
-  let globalTotalMealsCount = 0; // Đặt tổng số lượng món ăn tích lũy về 0 để quét lại toàn mảng
+  totalCaloriesCount = 0; 
+  let globalTotalMealsCount = 0; 
 
-  // Duyệt qua từng phần tử bữa ăn đang có trong danh sách mảng
+  
   listMeals.forEach(function (item) {
     const row = document.createElement("tr");
 
