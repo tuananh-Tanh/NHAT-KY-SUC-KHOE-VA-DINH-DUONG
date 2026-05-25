@@ -6,7 +6,7 @@ let totalCaloriesCount = 0;
 document
   .getElementById("mealForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Chặn hành động tải lại trang mặc định
+    event.preventDefault(); 
 
     
     const fullName = document.getElementById("fullName").value.trim();
@@ -63,17 +63,17 @@ document
     }
 
     if (lastNumber % 2 !== 0) {
-      // MSSV số lẻ -> Chèn bản ghi lên ĐẦU mảng (unshift)
+      
       listMeals.unshift(newMeal);
     } else {
-      // MSSV số chẵn -> Chèn bản ghi xuống CUỐI mảng (push)
+      
       listMeals.push(newMeal);
     }
 
     
     renderTable();
 
-    // 7. Đặt lại (Reset) các trường lựa chọn về trạng thái trống ban đầu
+   
     document.getElementById("mealSelect").value = "";
     document.getElementById("mealTime").value = "";
   });
@@ -90,7 +90,7 @@ function renderTable() {
   listMeals.forEach(function (item) {
     const row = document.createElement("tr");
 
-    // Tạo cấu trúc mã HTML để chèn thêm một dòng mới vào bảng thân dữ liệu
+    
     row.innerHTML = `
             <td>
                 <strong>${item.studentName}</strong><br>
@@ -108,11 +108,11 @@ function renderTable() {
     globalTotalMealsCount += item.mealCount; // Tích lũy cộng dồn số lượng món ăn dựa vào id bạn đã gán
   });
 
-  // Cập nhật giá trị hiển thị tổng lượng Calo hàng ngày xuống phần chân bảng (tfoot)
+  
   document.getElementById("totalCalories").innerText =
     totalCaloriesCount + " kcal";
 
-  // 8. ĐIỀU KIỆN KIỂM TRA TỔNG SỐ MÓN ĂN ĐÃ CHỌN LỚN HƠN 10 MÓN ĐỂ BẬT THÔNG BÁO
+ 
   if (globalTotalMealsCount > 10) {
     // Sử dụng setTimeout nhẹ (50ms) để trình duyệt kịp cập nhật vẽ bảng lên màn hình trước khi bảng thông báo hiện ra chặn trình duyệt
     setTimeout(function () {
