@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Hàm render cấu trúc mã lỗi nguyên văn
+ 
   function renderOriginalCode() {
     const originalCode = `<span class="code-keyword">let</span> btn = document.<span class="code-function">getElementById</span>(<span class="code-string">"23010001_btn_save"</span>);<br />
 btn.<span class="code-function">addEventListener</span>(<span class="code-string">"click"</span>, <span class="code-function">saveDate</span>());<br /><br />
@@ -53,7 +53,7 @@ btn.<span class="code-function">addEventListener</span>(<span class="code-string
     document.getElementById("originalCodeContainer").innerHTML = originalCode;
   }
 
-  // Hàm render cấu trúc mã đã được sửa lỗi hoàn chỉnh kèm chú thích bình luận
+  
   function renderFixedCode() {
     const fixedCode = `<span class="code-comment">// Bước 1: Lấy phần tử nút bấm thông qua thuộc tính ID</span><br />
 <span class="code-keyword">let</span> btn = document.<span class="code-function">getElementById</span>(<span class="code-string">"23010001_btn_save"</span>);<br /><br />
