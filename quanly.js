@@ -118,7 +118,7 @@ function renderTable() {
     
     setTimeout(function () {
       alert(
-        `Thông báo: Tổng số món ăn tích lũy của bảng thực đơn hôm nay đã đạt ${globalTotalMealsCount} món (Vượt mốc 10 món!). Chúc mừng bạn có một chế độ dinh dưỡng cực kỳ đa dạng và lành mạnh.`,
+        `Thông báo: Tổng số món ăn tích lũy của bảng thực đơn hôm nay đã đạt ${globalTotalMealsCount} món (Vượt mốc 10 món!). TỈ SUẤT THỰC ĐƠN ĐỦ TIÊU CHÍ LÀNH MẠNH.`,
       );
     }, 50);
   }
