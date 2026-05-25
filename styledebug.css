@@ -5,13 +5,13 @@ body {
     BlinkMacSystemFont,
     Roboto,
     sans-serif;
-  background-color: #0b0f14; /* Màu đen xanh của vỏ máy tính, trạm điều khiển */
-  color: #cbd5e1; /* Màu chữ xám bạc giúp làm dịu mắt */
+  background-color: #0b0f14; 
+  color: #cbd5e1;
   overflow-x: hidden;
   position: relative;
 }
 .navbar {
-  border-bottom: 3px solid #4caf50; /* Border xanh lá dày dưới menu làm điểm nhấn */
+  border-bottom: 3px solid #4caf50;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .navbar-brand {
@@ -22,13 +22,13 @@ body {
   gap: 10px;
 }
 .navbar-brand img {
-  border: 2px solid #ffffff; /* Viền trắng quanh Logo */
+  border: 2px solid #ffffff; 
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
 }
 
-/* Hiệu ứng hạt giả lập hoặc lưới ma trận ngầm phía sau nền (Grid Background) */
+
 body::before {
   content: "";
   position: fixed;
@@ -39,17 +39,17 @@ body::before {
   background-image:
     linear-gradient(rgba(18, 24, 32, 0.5) 1px, transparent 1px),
     linear-gradient(90deg, rgba(18, 24, 32, 0.5) 1px, transparent 1px);
-  background-size: 20px 20px; /* Tạo lưới ô vuông mờ như bảng mạch */
+  background-size: 20px 20px; 
   z-index: -1;
 }
 
 /* --- Tiêu đề trang Debug --- */
 h1.text-center {
-  color: #ff3838; /* Màu đỏ cảnh báo hệ thống (System Error/Debug) */
+  color: #ff3838; 
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(255, 56, 56, 0.4); /* Phát sáng chữ */
+  text-shadow: 0 0 10px rgba(255, 56, 56, 0.4); 
 }
 p.text-center.text-muted {
   color: #64748b !important;
@@ -59,8 +59,8 @@ p.text-center.text-muted {
 
 /* --- TRANG TRÍ CARD CHUNG (Khung cơ khí) --- */
 .card {
-  background-color: #131a22 !important; /* Hộp đen nhám vỏ máy */
-  border: 1px solid #223142 !important; /* Viền sắt thép cơ khí */
+  background-color: #131a22 !important; 
+  border: 1px solid #223142 !important;
   border-radius: 12px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   position: relative;
@@ -75,18 +75,18 @@ p.text-center.text-muted {
   right: 15px;
   font-family: monospace;
   font-size: 10px;
-  color: #00ff66; /* Đèn xanh lá báo trạng thái hoạt động */
+  color: #00ff66; 
   text-shadow: 0 0 5px #00ff66;
 }
 
-/* Thay đổi màu đèn LED riêng cho cột mã lỗi sang màu đỏ cảnh báo */
+
 .col-lg-6:first-child .card::after {
   content: "● SYS_ERROR";
   color: #ff3333;
   text-shadow: 0 0 5px #ff3333;
 }
 
-/* Tiêu đề nhỏ bên trong Card kèm biểu tượng (Iconic) */
+
 .card h3 {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.15rem;
@@ -96,24 +96,24 @@ p.text-center.text-muted {
   gap: 8px;
 }
 
-/* --- KHỐI TRÌNH DIỄN CODE (Code Editor Terminal) --- */
+
 .code-block {
-  background-color: #070b10 !important; /* Đen sâu thẳm màn hình console */
+  background-color: #070b10 !important; 
   border: 1px solid #1e293b;
-  border-left: 4px solid #3b82f6; /* Thanh đánh dấu viền trái màu xanh dương */
+  border-left: 4px solid #3b82f6; 
   border-radius: 8px;
   padding: 18px;
   font-family: "Consolas", "Fira Code", "Courier New", monospace !important;
   font-size: 13.5px;
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8); /* Bóng sụp bên trong tạo độ sâu */
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* Đổi màu viền trái của code đã sửa thành màu xanh lục hoàn thành */
+
 #fixedCodeContainer {
   border-left-color: #00ff66 !important;
 }
 
-/* --- TÔ MÀU PHÂN TÁCH CÚ PHÁP CODE (Syntax Highlighting) --- */
+
 .code-keyword {
   color: #ff79c6; /* Từ khóa let, function màu hồng tím */
   font-weight: bold;
