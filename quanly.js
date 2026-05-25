@@ -92,12 +92,10 @@ function renderTable() {
 
     
     row.innerHTML = `
-            <td>
-                <strong>${item.studentCode}</strong>
-            </td>
+           
             <td>
                 <strong>${item.studentName}</strong>
-                
+                <small class="text-muted">MSSV: ${item.studentCode}</small>
             </td>
             <td><span class="badge bg-secondary">${item.time}</span></td>
             <td>${item.name} <span class="text-muted" style="font-size:12px;">(+${item.mealCount} món)</span></td>
