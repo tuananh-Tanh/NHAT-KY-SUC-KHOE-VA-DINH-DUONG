@@ -117,7 +117,7 @@ function renderTable() {
     // Sử dụng setTimeout nhẹ (50ms) để trình duyệt kịp cập nhật vẽ bảng lên màn hình trước khi bảng thông báo hiện ra chặn trình duyệt
     setTimeout(function () {
       alert(
-        `Thông báo: Tổng số món ăn tích lũy của bạn hiện tại đã đạt ${globalTotalMealsCount} món (Vượt mốc 10 món!). Chúc mừng bạn đang có một chế độ dinh dưỡng cực kỳ đa dạng và lành mạnh.`,
+        `Thông báo: Tổng số món ăn tích lũy của bảng thực đơn hôm nay đã đạt ${globalTotalMealsCount} món (Vượt mốc 10 món!). Chúc mừng bạn có một chế độ dinh dưỡng cực kỳ đa dạng và lành mạnh.`,
       );
     }, 50);
   }
